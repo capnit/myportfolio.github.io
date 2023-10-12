@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Colorful Cursor Spread</title>
+    <style>
+        body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    height: 100vh;
+}
+
+.container h1 {
+    font-size: 36px;
+    cursor: none;
+    display: inline-block;
+    position: relative;
+}
+
+.cursor {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff5733, #33ff57, #5733ff, #ff5733);
+    animation: colorfulCursor 2s infinite;
+    transform: scale(0);
+}
+
+@keyframes colorfulCursor {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(20);
+        opacity: 0;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hover or Touch Here</h1>
+    </div>
+    <script>
+        function createCursor(x, y) {
+    const cursor = document.createElement("div");
+    cursor.className = "cursor";
+    document.body.appendChild(cursor);
+
+    cursor.style.left = x + "px";
+    cursor.style.top = y + "px";
+
+    // Remove the cursor element after the animation
+    cursor.addEventListener("animationiteration", () => {
+        document.body.removeChild(cursor);
+    });
+}
+
+document.addEventListener("mousemove", (e) => {
+    createCursor(e.clientX, e.clientY);
+});
+
+document.addEventListener("touchmove", (e) => {
+    e.preventDefault();
+    const touch = e.touches[0];
+    createCursor(touch.clientX, touch.clientY);
+});
+
+    </script>
+</body>
+</html>

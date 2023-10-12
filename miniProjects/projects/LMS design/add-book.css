@@ -1,0 +1,243 @@
+.form-container {
+  /* height: 700px; */
+  height: 600px;
+  /* height: 85vh; */
+  /* width: 700px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  margin: auto;
+  padding: 30px;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+header {
+  position: relative;
+  /* background-color: rgb(96 89 34 / 50%); */
+}
+
+header a {
+  background-color: rgb(96 89 34 / 50%);
+  /* background-color: rgb(96 71 51 / 59%); */
+}
+
+body {
+ 
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp2036901.jpg&f=1&nofb=1);
+  background-position: center;
+  background-size: cover;
+  
+  animation-name: rotate-bg;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(https://www.dublincity.ie/sites/default/files/media/inline-images/migrated/2019%20Longlist%20Collage%2016%20x%209.jpg);
+ 
+  background-size: contain;
+  /* Moving Background ends */
+}
+
+.form-container {
+  animation-name: welcome;
+  animation-duration: 3s;
+  /* animation-iteration-count: infinite; */
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  /* margin: auto !important; */
+}
+
+.form-label {
+  color: wheat;
+  -webkit-text-stroke: 1px black;
+  font-weight: bolder;
+  font-size: 20px;
+  /* margin-right: 10px; */
+  /* float: left; */
+}
+
+.form-control {
+  /* float: right; */
+  /* background-color: wheat !important; */
+  /* opacity: 0.8; */
+  filter: brightness(0.8);
+}
+
+.pair {
+  /* display: flex; */
+}
+
+#instBtn {
+  background-color: brown;
+  outline: none;
+}
+
+#instBtn:hover {
+  background-color: green;
+}
+
+#fetchBtn {
+  background-color: chocolate;
+}
+
+#fetchBtn:hover {
+  background-color: rgb(49, 49, 131);
+}
+
+#updateBtn {
+  background-color: darkorange;
+}
+
+#updateBtn:hover {
+  color: #fff;
+  background-color: #ffc107;
+}
+
+#deleteBtn {
+  background-color: darkred;
+}
+
+#deleteBtn:hover {
+  background-color: red;
+}
+
+.btn {
+  /* background-color: darkred; */
+  padding: 10px;
+  font-size: 18px;
+  color: #fff;
+  filter: brightness(80%);
+  /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)); */
+  /* background: linear-gradient(rgba(241, 4, 4, 0.3), rgba(243, 3, 3, 0.3)); */
+}
+
+#instBtn:focus {
+  /* background-color: brown; */
+  outline: none;
+  /* -webkit-text-stroke: 1px black; */
+}
+
+.buttonTray {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-x {
+  margin: 10px;
+}
+
+#toast-container > .toast:before {
+  position: fixed;
+  font-family: FontAwesome;
+  font-size: 24px;
+  line-height: 18px;
+  float: left;
+  color: #fff;
+  padding-right: 0.5em;
+  margin: auto 0.5em auto -1.5em;
+}
+
+
+
+.invalid-id {
+  /* color: red; */
+  /* width: 100%; */
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: #dc3545;
+  background-color: wheat;
+  width: fit-content;
+}
+
+.btn-primary {
+  border-color: transparent;
+}
+
+.btn-primary:hover {
+  border-color: transparent;
+}
+
+.list-group {
+  flex-direction: row;
+  padding-top: 30px;
+}
+
+.list-group-item {
+  color: white;
+  background: linear-gradient(70deg, rgb(24, 24, 24), rgb(25, 29, 29));
+}
+
+#footer {
+  margin-top: 8vh;
+}
+
+#footer .list-group-item {
+  width: 150px;
+}
+
+#footer a {
+  cursor: pointer;
+}
+
+#footer .list-group a {
+  text-decoration: none;
+  padding: 20px;
+  margin: 10px;
+}
+
+
+@media only screen and (min-width: 992px) {
+  @keyframes rotate-bg {
+    0% {
+      background-position: 0vh 0vw;
+    }
+    to {
+      background-position: -100vh 0vw;
+    }
+  }
+  
+@media screen and (max-width: 900px) {
+  .btn {
+    width: auto;
+  }
+
+  .buttonTray {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .btn {
+    width: auto;
+  }
+
+  .buttonTray {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .form-container {
+    padding: 0;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header li {
+    margin-left: 0;
+  }
+
+  header a {
+    font-size: medium;
+  }
+
+  header {
+    width: max-content;
+    display: block;
+  }
+}
+

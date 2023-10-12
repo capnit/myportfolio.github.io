@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="add_book.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="favicon_io/favicon-16x16.png">
+    <title>LICT Library Management System</title>
+  </head>
+  <body>
+   
+    <div class=main_header>
+      <div class="heading">
+          <h1 id="portal" style="margin-left: 11px;">LICT Library System</h1>
+      </div>
+    </div>
+
+    <hr>
+
+    <h1 id="title">Add Book</h1>
+
+	<form id="book-form" action="">
+            <p>Fill the details of book</p>
+            
+            <label id="name-label" for="book_name">Book Code</label>
+            <input id="book_code" type="number" placeholder="Enter Book Code" required>
+            
+           
+            <label id="name-label" for="book_name">Student ID</label>
+			      <input id="book_name" type="text" placeholder="Enter Student ID" required>
+
+           
+            <label id="name-label" for="book_name">Book Name</label>
+            <input id="author1" type="text" placeholder="Enter Book name" required>
+            
+            
+            <label id="name-label" for="book_name">Author Name</label>
+            <input id="author2" type="text" placeholder="Enter Author name" >
+            
+            <label id="name-label" for="subject">Date Of Issue</label>
+            <input id="Subject" type="text" placeholder="Enter Issue Date" required>
+            
+			      <label id="name-label" for="book_name">Tags</label>
+            <textarea id="tags" placeholder="Add some tags which will help you during searching.tags may be name of the book, author, subject etc."></textarea>
+
+            <div class="upload-btn-wrapper">
+                    <button class="btn">Upload a Ebook</button>
+                    <input type="file" name="myfile" />
+            </div>
+
+			<button id="submit">Upload</button>
+    
+      <div >
+        <button class="BUTTON" id="log_button" onclick="location.href='AdminHome.html'">Back</button>
+      </div>
+  
+    </div>
+    <script src="add_book.js"></script>
+    
+  </body>
+</html>

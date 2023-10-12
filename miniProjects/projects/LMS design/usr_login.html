@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		
+		<meta charset="utf-8">
+		
+		<title>Student Form</title>
+		
+		<link rel="stylesheet" href="Registration Form.css">
+		<link rel="icon" href="favicon_io/favicon-16x16.png">
+		<meta>
+		<style>
+		#popup-container {
+			
+        display: none;
+	
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        background-color: rgba(0, 128, 0, 0.9);
+        color: #fff;
+        border-radius: 5px;
+        z-index: 9999;
+		}
+		</style>
+		
+	</head>
+
+	<body>
+		
+
+		<div class="hero">
+			<a href="indexs.html" class="botn">Back</a>
+
+			<div class="form-box">
+				
+				<div class="button-box">
+					<div id="btn"></div>
+					<button class="toggle-btn" onclick="login()">Login</button>
+					<button class="toggle-btn" onclick="register()">Register</button>
+				</div>
+				
+				<div class="social-icons">
+					<a href="https://www.facebook.com/Lumbini.ICT"> <img src="fb.png"></a>
+					<a href="https://twitter.com/"><img src="tw.png"></a>
+					<a href="https://www.google.com/"><img src="gp.png"></a>
+				</div>
+				
+				<form class="input-group" id="login">
+					<input type="text" class="input-field" placeholder="User Id" required>
+					<input type="text" class="input-field" placeholder="Enter Password" required>
+					<input type="checkbox" class="check-box"><span>Remember Password</span>
+					<button type="submit" class="submit-btn"><a href="add-book.html" style="text-decoration: none;color: black;">Log In</a></button>
+				</form>
+				
+				<form class="input-group" id="register">
+					<input type="text" class="input-field" placeholder="User Id" required>
+					<input type="email" class="input-field" placeholder="Email Id" required>
+					<input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+					<button type="submit" class="submit-btn">Register</button>
+				</form>			
+			</div>
+		
+		</div>
+		<div id="popup-container"></div>
+		<script>
+			var x = document.getElementById("login"),
+				y = document.getElementById("register"),
+				z = document.getElementById("btn");
+				
+				function register() {
+				
+				x.style.left = "-400px";
+				y.style.left = "50px";
+				z.style.left = "110px";
+				};
+				
+				function login() {
+				
+				x.style.left = "50px";
+				y.style.left = "450px";
+				z.style.left = "0";
+				};				
+		
+		
+	    var registrationForm = document.getElementById("register");
+  registrationForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Get the input values
+    var userId = document.querySelector("#register .input-field[placeholder='User Id']").value;
+    var email = document.querySelector("#register .input-field[placeholder='Email Id']").value;
+
+    // Display the message as a popup
+    var popupContainer = document.getElementById("popup-container");
+    popupContainer.innerHTML = "Your account is registered. UserId: " + userId + ", Email: " + email;
+    popupContainer.style.display = "block";
+
+    // Clear the input fields
+    registrationForm.reset();
+
+    // Hide the popup after a few seconds and redirect to login page
+    setTimeout(function () {
+      popupContainer.style.display = "none";
+      window.location.href = "usr_login.html"; 
+    }, 3000); // Adjust the delay as needed
+  });
+		  </script>
+	</body>
+
+</html>

@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+   
+    <title>AddBook</title>
+ 
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    />
+<link rel="icon" href="favicon_io/favicon-16x16.png">
+   
+    <link rel="stylesheet" href="assets/bootstrap.min.css" />
+    
+    <link rel="stylesheet" href="assets/toastr.min.css" />
+ 
+    <link rel="stylesheet" href="shared.css" />
+    <link rel="stylesheet" href="add-book.css" />
+  
+  </head>
+  <body class="scrollbar">
+   
+    <header id="header">
+      <div id="page-logo">
+        <a href="project.html">LICT Library</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="project.html">Home</a></li>
+          <li>
+            <a href="indexs.html">Login</a>
+          </li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <div class="form-container">
+      <div class="mb-3 col-5 pair form-floating col-sm-5 col-lg-10 col-md-7">
+        <input
+          required
+          placeholder="Title"
+          class="form-control form-control-sm"
+          type="text"
+          id="Titlebox"
+        />
+        <label class="form-label">Book Name</label>
+      </div>
+      <div class="mb-3 col-5 pair form-floating col-sm-5 col-lg-10 col-md-7">
+        <input
+          required
+          placeholder="Book Name"
+          class="form-control"
+          type="text"
+          id="Authorbox"
+        />
+        <label class="form-label">Author</label>
+      </div>
+      <div class="mb-3 col-5 pair form-floating col-sm-5 col-lg-10 col-md-7">
+        <input
+          required
+          placeholder="Author"
+          class="form-control"
+        type="text"
+        id="Authorbox"
+         
+        />
+        <label class="form-label">Date Of Issue</label>
+      </div>
+      <div class="mb-3 col-5 pair form-floating col-sm-5 col-lg-10 col-md-7">
+        <input
+          required
+          placeholder="Issue Date"
+          class="form-control"
+          type="number"
+          id="Idbox"
+        />
+        <label class="form-label">Submittion Date</label>
+       
+      </div>
+      <div class="mb-3 col-5 pair form-floating col-sm-5 col-lg-10 col-md-7">
+        <textarea
+          required
+          placeholder="Description"
+          rows="4"
+          class="form-control"
+          type="text"
+          id="Descbox"
+          style="height: auto"
+        ></textarea>
+
+        <label class="form-label">Description</label>
+      </div>
+      <div class="buttonTray">
+        <button id="instBtn" class="btn btn-success col-5 btn-x" type="submit">
+          Add
+        </button>
+        <button id="fetchBtn" class="btn btn-primary col-5 btn-x" type="submit">
+          Fetch
+        </button>
+        <button
+          id="updateBtn"
+          class="btn btn-warning col-5 btn-x"
+          type="submit"
+        >
+          Update
+        </button>
+        <button id="deleteBtn" class="btn btn-danger col-5 btn-x" type="submit">
+          Delete
+        </button>
+      </div>
+     
+    </div>
+  
+    <script src="./assets/jquery-3.5.1.min.js"></script>
+    
+    <script src="/assets/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+  
+    <script>
+      // Function to show a success message in a pop-up form
+      function showSuccessMessage(message) {
+          alert("Success: " + message);
+      }
+
+      // Function to show an error message in a pop-up form
+      function showErrorMessage(message) {
+          alert("Error: " + message);
+      }
+
+      // Function to add a book
+      function addBook() {
+          const title = document.getElementById("Titlebox").value;
+          const author = document.getElementById("Authorbox").value;
+          const issueDate = document.getElementById("Idbox").value;
+          const submissionDate = document.getElementById("Idbox").value;
+          const description = document.getElementById("Descbox").value;
+
+         
+          // Once the book is added successfully, show a success message
+          showSuccessMessage("Your book has been added.");
+      }
+
+      // Function to update a book
+      function updateBook() {
+          const title = document.getElementById("Titlebox").value;
+          const author = document.getElementById("Authorbox").value;
+          const issueDate = document.getElementById("Idbox").value;
+          const submissionDate = document.getElementById("Idbox").value;
+          const description = document.getElementById("Descbox").value;
+
+          
+
+          // Once the book is updated successfully, show a success message
+          showSuccessMessage("Your book has been updated.");
+      }
+
+     
+      function fetchBooks() {
+          
+
+          // Redirect to "list.html" to view the data
+          window.location.href = "list.html";
+      }
+
+      // Function to delete a book
+      function deleteBook() {
+          const title = document.getElementById("Titlebox").value;
+          const author = document.getElementById("Authorbox").value;
+          const issueDate = document.getElementById("Idbox").value;
+          const submissionDate = document.getElementById("Idbox").value;
+          const description = document.getElementById("Descbox").value;
+
+          // Once the book is deleted successfully, show a success message
+          showSuccessMessage("Your book has been deleted.");
+      }
+
+      // Event listener for the "Add" button
+      document.getElementById("instBtn").addEventListener("click", addBook);
+
+      // Event listener for the "Delete" button
+      document.getElementById("deleteBtn").addEventListener("click", deleteBook);
+
+      // Event listener for the "Update" button
+      document.getElementById("updateBtn").addEventListener("click", updateBook);
+
+      // Event listener for the "Fetch" button
+      document.getElementById("fetchBtn").addEventListener("click", fetchBooks);
+  </script>
+  </body>
+</html>

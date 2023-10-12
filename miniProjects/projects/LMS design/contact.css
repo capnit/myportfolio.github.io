@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Licorice&family=PT+Serif&display=swap');
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+body{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: aliceblue;
+}
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background:display flex;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+ footer .container .sect{
+     margin-right: 30px;
+ }
+ footer .container .aboutus{
+     width:40% ;
+ }
+ footer .container h2{
+     position: relative;
+     color:#fff;
+     font-weight: 500;
+     margin-bottom: 15px;
+ }
+ footer .container h2::before{
+     content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: rgb(212, 21, 21);
+ }
+ footer .container .aboutus p{
+     color: #fff;
+     font-weight: 200;
+     margin-bottom: 18px;
+ }
+ footer .container .aboutus ul{
+     display: flex;
+ }
+ footer .container .aboutus ul li{
+     list-style: none;
+     margin-right: 20px;
+
+ }
+ footer .container .aboutus ul li a{
+     display: inline-block;
+     width: 40px;
+     height: 40px;
+     background-color: #222;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-decoration: none;
+ }
+ footer .container .aboutus ul li a:hover{
+     background-color: #f00;
+ }
+ footer .container .aboutus ul li a .fab{
+     color: #fff;
+     font-size: 20px;
+ }
+ footer .container .quicklinks{
+     position: relative;
+     width: 25%;
+     padding: 0px 25px;
+     
+ }
+ footer .container .quicklinks ul li{
+     list-style: none;
+ }
+ footer .container .quicklinks ul li a{
+     color:#ffff;
+     display: inline-block;
+     text-decoration: none;
+     margin-bottom: 10px;
+ }
+ footer .container .quicklinks ul li a:hover{
+     color:#f00;
+ }
+ footer .container .quicklinksy{
+    position: relative;
+    width: 25%;
+    padding: 0px 25px;
+    
+}
+footer .container .quicklinksy ul li{
+    list-style: none;
+}
+footer .container .quicklinksy ul li a{
+    color:#fff;
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+footer .container .quicklinksy ul li a:hover{
+    color:#f00;
+}
+footer .sect h2{
+    position: relative;
+    color:#fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+footer .sect h2::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: rgb(212, 21, 21);
+ }
+ footer .sect {
+     width: calc(35%-60px);
+     margin-right: 0 !important;
+ }
+ footer .sect ul{
+     position: relative;
+    
+ }
+ footer .sect ul li{
+     display: flex;
+     margin-bottom: 20px;
+    list-style: none;
+
+ }
+ footer .sect ul li span{
+     color: #fff;
+ }
+ footer .sect ul li span:nth-child(1){
+     color: #fff;
+     font-size: 20px;
+     margin-left: 1px;
+
+ }
+ footer .sect ul li a{
+    color:#fff;
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 10px; }
+
+ footer .sect ul li a :hover{
+     color: #fff;
+ }
+ .copyright{
+     display: flex;
+     justify-content: center;
+     width: 100%;
+     background :display flex;
+    padding: 5px 10px;
+ }
+ .copyright p{
+     font-size: 20px;
+     letter-spacing: 1px;
+     color: rgb(0, 0, 0);
+
+      
+ }
+ .copyright p a{
+     text-decoration: none;
+     font-size: 22px;
+     font-weight: 500;
+     color: #fff;
+     text-transform: uppercase;
+
+ }
+ .copyright p a:hover{
+     color: rgb(112, 22, 22);
+ }
+ @media (max-width: 1000px)
+ {
+     footer{
+         padding: 40px;
+     }
+     footer .container{
+         flex-direction: column;
+     }
+    footer .container .sect{
+        margin-right: 30px;
+        margin-bottom: 20px;
+    }
+    footer .container .aboutus{
+        width: 100%;
+    }
+    footer .container .quicklinks{
+        width: 100%;
+        padding: 0;
+    }
+    footer .container .quicklinksy{
+        width:100% ;
+        
+    }
+    footer .sec{
+        width: 100%;
+    }
+    .copyright{
+        padding: 0;
+
+    }
+    .copyright p{
+        font-size: 14px;
+    }
+    .copyright  p a{
+        font-size: 12px;
+
+    }
+ }
+ /* body coding start */
+ *{
+    margin: 0px;
+    padding: 0px,
+
+}
+body{
+    /* background-image: url(co1jpg.jpg); */
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Licorice', cursive;
+    font-family: 'PT Serif', serif;
+    background-color: rgb(238, 151, 151);
+}
+h1{
+    font-size: 40px;
+    color: rgb(255, 250, 250);
+    margin-top: 250px;
+
+    
+}
+p{
+    font-size: 20px;
+    color: white;
+
+}
+h3{
+    font-size: 40px;
+    color: white;
+    /* float left: 10px; */
+}
+
+
+.col-md-5{
+ margin-top: 80px;
+ box-shadow: -2px 2px 70px 20px rgb(2, 1, 1);
+ background: rgba(0,0,0,0.4);
+ /* display: flex; */
+ /* width: 600px; */
+ /* height: 600px; */}
+
+
+
+.label{
+ font-weight: bold;
+ margin-top: 15px;
+ color: white;
+ font-size: 15px;
+ /* float: right; */
+
+}
+
+ .form-conrol{
+     background: transparent;
+     border-radius: 0px;
+     border: 0px;
+     border-bottom: 1px solid white;
+     font-size: 18px;
+     margin-bottom: 15px;
+     height: 40px;
+     color: thistle;
+     text-align: center;
+
+
+ }
+ 
+
+ .banner{
+
+width: 100%;
+height: 100vh;
+/* background: url(../images/bg.jpg); */
+background-size: cover;
+background-position: center;
+}
+header
+{
+width: 100%;
+padding: 30px 60px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+header img{
+color: rgb(12, 100, 100);
+font-size: 1.6em;
+font-weight: 600;
+} 
+
+
+header ul
+{
+display: flex;
+list-style: none;
+}
+header ul li
+{
+margin-left: 40px;
+}
+header ul li a
+{
+color: rgb(238, 238, 238);
+padding: 5px 8px;
+transition-duration: 0.4s;
+
+}
+header ul li a:hover
+{
+background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+
+
+
+

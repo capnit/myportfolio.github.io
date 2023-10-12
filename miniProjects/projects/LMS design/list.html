@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="icon" href="favicon_io/favicon-16x16.png">
+
+    <title>Book Lists</title>
+    <style>
+        .btnn {
+            background: #fff5f5;
+            color: rgb(71, 19, 19);
+            margin-left: 1450px;
+            padding: 2px 10px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btnn:hover {
+            color: #f05462;
+            background: rgb(44, 204, 68);
+            padding: 3px 8px;
+            border: 2px solid #f05462;
+        }
+
+        body {
+          background-image: url('dn.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        
+
+        /* Add gradient animation to the words */
+        .animated-gradient-text {
+            background: linear-gradient(45deg, #f05462, #1ae9c6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientTextAnimation 3s infinite;
+        }
+
+        @keyframes gradientTextAnimation {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+          
+         #table {
+            background: linear-gradient(45deg, #f05462, #0dd8db);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientTextAnimation 3s infinite;
+        }
+
+        @keyframe table{
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+       .hello{
+        color: #0dd8db;
+       }
+       .kxa{
+        color: rgb(244, 2, 2);
+    
+       }
+    </style>
+</head>
+
+<body>
+    <h1 style="margin: 100px; margin-left: 390px;" class="animated-gradient-text">LIST OF BOOKS YOU HAVE TAKEN</h1>
+
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    <br><br>
+
+    <div id="message"></div>
+
+    <div id="table">
+        <h1>Your books</h1>
+        <br><br>
+        <div class="user">
+            <a href="#" class="btnn">See All</a>
+            <table class="table table-striped">
+                <thead class="hello">
+                    <tr>
+                        <th scope="col">Book Name</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">Issue Date</th>
+                        <th scope="col">Submission Date</th>
+                    </tr>
+                </thead>
+                <tbody class="kxa">
+                  
+                    <tr>
+                        <td>DSA</td>
+                        <td>Mani Kumar</td>
+                        <td>2080-01-02</td>
+                        <td>2080-06-02</td>
+                    </tr>
+                    <tr>
+                        <td>CA</td>
+                        <td>Roshan Rimal</td>
+                        <td>2080-01-02</td>
+                        <td>2080-06-02</td>
+                    </tr>
+                    <tr>
+                        <td>Stat</td>
+                        <td>Himal Koirala</td>
+                        <td>2080-01-02</td>
+                        <td>2080-06-02</td>
+                    </tr>
+                    <tr>
+                        <td>NM</td>
+                        <td>Jeevan Kc</td>
+                        <td>2080-01-02</td>
+                        <td>2080-06-02</td>
+                    </tr>
+                    <tr>
+                        <td>CG</td>
+                        <td>Krishna Kumar</td>
+                        <td>2080-01-02</td>
+                        <td>2080-06-02</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LICT Library Feedback</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="feedback.css">
+  <link rel="icon" href="favicon_io/favicon-16x16.png">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-body">
+        <h1 class="card-title text-center mb-4">Library Feedback</h1>
+        <form id="feedbackForm">
+          <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="feedback">Feedback:</label>
+            <textarea class="form-control" id="feedback" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit Feedback</button>
+        </form>
+        <div id="feedbackMessage" class="mt-3 text-center"></div>
+      </div>
+    </div>
+  </div>
+  
+   
+  
+  <script src="feedback.js"></script>
+</body>
+</html>
+
